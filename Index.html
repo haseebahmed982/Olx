@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OLX - Final Original</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#fff;color:#002f34;}
+.header{background:#f7f8f8;padding:12px 4%;display:flex;align-items:center;gap:25px;position:sticky;top:0;z-index:100;border-bottom:1px solid #ddd;}
+.logo{font-size:34px;font-weight:900;color:#3a77ff;}
+.right{margin-left:auto;display:flex;gap:20px;align-items:center;}
+.login{font-weight:700;text-decoration:underline;}
+.sell{border:4px solid;border-color:#ffce32 #3a77ff #23e5db #ffce32;border-radius:24px;padding:7px 18px;background:#fff;font-weight:800;}
+.search-wrap{background:#f7f8f8;padding:12px 4%;display:flex;gap:12px;}
+.loc-box{width:28%;background:#fff;border:2px solid #002f34;border-radius:4px;height:48px;display:flex;align-items:center;padding:0 10px;gap:8px;}
+.loc-box input{border:0;outline:0;width:100%;}
+.search-box{width:72%;background:#fff;border:2px solid #002f34;border-radius:4px;height:48px;display:flex;overflow:hidden;}
+.search-box input{border:0;outline:0;width:100%;padding:0 14px;}
+.search-box button{background:#002f34;color:#fff;border:0;padding:0 20px;}
+.cat-bar{background:#fff;padding:12px 4%;display:flex;gap:20px;overflow-x:auto;white-space:nowrap;align-items:center;box-shadow:0 1px 2px rgba(0,0,0,0.1);}
+.cat-bar::-webkit-scrollbar{display:none;}
+.cat-item{font-size:13px;font-weight:600;padding:5px 8px;border-radius:4px;text-decoration:none;color:#002f34;}
+.cat-item:hover{background:#e8f0f2;}
+.banner{margin:15px 4%;height:165px;border-radius:6px;overflow:hidden;background:#ddd;}
+.banner img{width:100%;height:100%;object-fit:cover;}
+.title{padding:20px 4% 12px;font-size:20px;font-weight:700;}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:15px;padding:0 4% 25px;text-align:center;}
+.item{cursor:pointer;}
+.circle{width:82px;height:82px;margin:0 auto 6px;border-radius:50%;background:#f7f8f8;display:flex;align-items:center;justify-content:center;}
+.circle img{width:72px;height:72px;object-fit:contain;}
+.item p{font-size:12px;font-weight:600;}
+.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;flex-direction:column;}
+.lightbox:target{display:flex;}
+.lightbox img{max-width:90%;max-height:75%;border-radius:10px;background:#fff;padding:8px;}
+.lightbox iframe{width:90%;max-width:700px;height:400px;border-radius:10px;border:0;}
+.close-btn{color:#fff;margin-top:18px;font-size:16px;text-decoration:none;background:#3a77ff;padding:7px 20px;border-radius:20px;font-weight:700;}
+@media(max-width:768px){.grid{grid-template-columns:repeat(3,1fr);}.search-wrap{flex-direction:column;}.loc-box,.search-box{width:100%;}.lightbox iframe{height:250px;}}
+</style>
+</head>
+<body>
+
+<div class="header">
+<div class="logo">OLX</div>
+<div class="right"><div class="login">Login</div><button class="sell">+ SELL</button></div>
+</div>
+
+<div class="search-wrap">
+<div class="loc-box">
+<svg width="20" height="20" viewBox="0 0 24 24"><path fill="#002f34" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+<input value="Pakistan">
+</div>
+<div class="search-box"><input placeholder="Find Cars, Mobile Phones and more..."><button>⌕</button></div>
+</div>
+
+<div class="cat-bar">
+<a href="#" class="cat-item"><b>ALL CATEGORIES ▾</b></a>
+<a href="#mobile" class="cat-item">Mobile Phones</a>
+<a href="#cars" class="cat-item">Cars</a>
+<a href="#bike" class="cat-item">Motorcycles</a>
+<a href="#house" class="cat-item">Houses</a>
+<a href="#video" class="cat-item">Video-Audios</a>
+<a href="#tablet" class="cat-item">Tablets</a>
+<a href="#land" class="cat-item">Land & Plots</a>
+</div>
+
+<div class="banner"><img src="https://images.olx.com.pk/thumbnails/500688708-800x600.webp"></div>
+
+<div class="title">All categories</div>
+<div class="grid">
+<!-- ORIGINAL OLX ICONS -->
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/mobiles.8c768c96bfde42f18fcfdaa368.png"></div><p>Mobiles</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/vehicles.19cc540e7113a82c0fbeb390ae3.png"></div><p>Vehicles</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/property-for-sale.e3a00dbfdaa69fe5f713bd6e5cc2.png"></div><p>Property For Sale</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/property-for-rent.843dba3f60b47646d5a0e65fbe57e1e.png"></div><p>Property For Rent</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/electronics-home-appliances.46e034dd82dd997a1691.png"></div><p>Electronics</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/bikes.4dcd02c259c54d0d97fe.png"></div><p>Bikes</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/business-industrial-agriculture.97ddcf661d1e95f9e54d2d5e7aea2.png"></div><p>Business</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/services.bd11a5fb85bf665d1d2d5e7aea2.png"></div><p>Services</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/jobs.c75617db1d795fcfd1d2d5e7aea2.png"></div><p>Jobs</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/animals.62d396e85a48a0d84c0e1e.png"></div><p>Animals</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/furniture-home-decor.66a3f2c0d7b2d6b0d7c3e.png"></div><p>Furniture</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/fashion-beauty.3a7e6b1d8d6b0d7c3e.png"></div><p>Fashion</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/books-sports-hobbies.4e4d8b1d8d6b0d7c3e.png"></div><p>Books & Sports</p></div>
+<div class="item"><div class="circle"><img src="https://www.olx.com.pk/assets/kids.cd3dc3d3f5e0d6c0e2e0a.png"></div><p>Kids</p></div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="mobile" class="lightbox">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800">
+<a href="#" class="close-btn">✕ Close</a>
+</div>
+
+<div id="cars" class="lightbox"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800"><a href="#" class="close-btn">✕ Close</a></div>
+<div id="bike" class="lightbox"><img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=800"><a href="#" class="close-btn">✕ Close</a></div>
+<div id="house" class="lightbox"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800"><a href="#" class="close-btn">✕ Close</a></div>
+
+<!-- VIDEO-AUDIO ME YOUTUBE VIDEO WITH AUDIO -->
+<div id="video" class="lightbox">
+<iframe src="https://www.youtube.com/embed/8sXRbV-IiK8?autoplay=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<a href="#" class="close-btn">✕ Close Video</a>
+</div>
+
+<div id="tablet" class="lightbox"><img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800"><a href="#" class="close-btn">✕ Close</a></div>
+<div id="land" class="lightbox"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800"><a href="#" class="close-btn">✕ Close</a></div>
+
+</body>
+</html>
